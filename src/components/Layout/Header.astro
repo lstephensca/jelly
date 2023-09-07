@@ -22,3 +22,21 @@ import ThemeSwitcher from "@components/UI/ThemeSwitcher";
     </div>
   </div>
 </header>
+
+<style>
+  .scrolling {
+    @apply bg-white/75 backdrop-blur-sm dark:bg-slate-900/75;
+  }
+</style>
+
+<script>
+  const header = document.querySelector("header") as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("scrolling");
+    } else {
+      header.classList.remove("scrolling");
+    }
+  });
+</script>
