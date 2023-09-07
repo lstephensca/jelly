@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import MetaBase from "@components/Meta/MetaBase.astro";
 import GlobalStyles from "@components/Meta/GlobalStyles.astro";
+import Header from "@components/Layout/Header.astro";
 
 interface Props {
   title: string;
@@ -19,6 +20,7 @@ const { title, description, image } = Astro.props;
     <GlobalStyles />
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
